@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+Import fonts
+*/
+@font-face {
+  font-family: 'poppins-regular';
+  src: url(./assets/media/fonts/Poppins/PoppinsRegular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'poppins-medium';
+  src: url(./assets/media/fonts/Poppins/PoppinsMedium.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'poppins-semibold';
+  src: url(./assets/media/fonts/Poppins/PoppinsSemiBold.ttf) format('truetype');
+}
