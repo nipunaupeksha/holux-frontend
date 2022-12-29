@@ -11,7 +11,8 @@ import { HeaderMenuComponent } from './components/header/header-menu/header-menu
 import { HeaderComponent } from './components/header/header.component'
 import { TopbarComponent } from './components/header/topbar/topbar.component'
 import { DashboardComponent } from './pages/dashboard/dashboard.component'
-import { SigninComponent } from './pages/signin/signin.component'
+import { SigninComponent } from './pages/signin/signin.component';
+import { ToolbarComponent } from './components/header/toolbar/toolbar.component'
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SigninComponent } from './pages/signin/signin.component'
     HeaderComponent,
     HeaderMenuComponent,
     TopbarComponent,
+    ToolbarComponent,
   ],
   imports: [
     BrowserModule,
