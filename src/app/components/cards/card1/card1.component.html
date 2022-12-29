@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-center py-4 flex-column align-items-center">
+  <span [inlineSVG]="'./assets/media/icons/duotune/abstract/abs005.svg'"
+    class="svg-icon svg-icon-3x svg-icon-primary mb-2"></span>
+  <span class="d-none d-lg-block fs-3 text-primary">Holux</span>
+</div>
+<div class="card mb-3 border rounded">
+  <div class="card-body">
+    <div class="pt-4 pb-2">
+      <h3 class="card-title text-center pb-0 fw-bolder text-primary fs-3 cursor-default">
+        Login to Your Account</h3>
+      <p class="text-center cursor-default">Enter your username & password to login</p>
+    </div>
+    <form class="row g-3 needs-validation" novalidate>
+      <div class="col-12">
+        <label for="username" class="form-label">Username</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend">@</span> <input
+            type="text" name="username" class="form-control" id="username" required>
+          <div class="invalid-feedback">Please enter your username.</div>
+        </div>
+      </div>
+      <div class="col-12">
+        <label for="yourPassword" class="form-label">Password</label> <input
+          type="password" name="password" class="form-control" id="yourPassword" required>
+        <div class="invalid-feedback">Please enter your password!</div>
+      </div>
+      <div class="col-12"> <button class="btn btn-primary w-100 mt-5 mb-3"
+          type="submit">Login</button></div>
+    </form>
+  </div>
+</div>
+<div class="text-center pt-3 cursor-default"> Created by <a
+    href="https://nipunaupeksha.github.io">Nipuna Upeksha</a></div>
