@@ -17,7 +17,8 @@ import { Widget2Component } from './components/widgets/widget2/widget2.component
 import { Widget3Component } from './components/widgets/widget3/widget3.component'
 import { DashboardComponent } from './pages/dashboard/dashboard.component'
 import { SigninComponent } from './pages/signin/signin.component';
-import { Widget4Component } from './components/widgets/widget4/widget4.component'
+import { Widget4Component } from './components/widgets/widget4/widget4.component';
+import { Widget5Component } from './components/widgets/widget5/widget5.component'
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { Widget4Component } from './components/widgets/widget4/widget4.component
     Widget2Component,
     Widget3Component,
     Widget4Component,
+    Widget5Component,
   ],
   imports: [
     BrowserModule,

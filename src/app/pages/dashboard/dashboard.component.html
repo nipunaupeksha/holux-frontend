@@ -1,15 +1,28 @@
 <app-header></app-header>
 <div class="row gy-5 g-xl-8 pt-2">
   <div class="col-xl-6">
+    <!-- show all the transactions within day, provide an option to generate a pdf -->
     <app-widget1 class="card card-xl-stretch"></app-widget1>
   </div>
   <div class="col-xl-6">
+    <!-- show monthly sales -->
     <app-widget2 class="card card-xl-stretch-50 mb-5 mb-xl-8" chartColor="primary"
       chartHeight="150px"></app-widget2>
+    <!--  show weekly sales -->
     <app-widget3 class="card card-xl-stretch-50 mb-5 mb-xl-8" chartColor="primary"
       chartHeight="175px"></app-widget3>
   </div>
-  <div class="col-xl-6">
+</div>
+
+<div class="row gy-5 gx-xl-8">
+  <div class="col-xl-8">
+    <!-- user expenses -->
     <app-widget4 class="card card-xl-stretch mb-5 mb-xl-8"></app-widget4>
+  </div>
+  <div class="col-xl-4">
+    <!-- vehicle expenses, create a new widget if necessary -->
+    <app-widget5 class="card card-xl-stretch mb-5 mb-xl-8"></app-widget5>
+    <!-- treding products -->
+    <app-widget5 class="card card-xl-stretch mb-5 mb-xl-8"></app-widget5>
   </div>
 </div>
