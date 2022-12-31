@@ -4,14 +4,20 @@ Import fonts
 @import './assets/sass/style';
 
 @font-face {
-  font-family: 'poppins-regular';
+  font-family: 'Poppins';
   src: url(./assets/media/fonts/Poppins/PoppinsRegular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'poppins-medium';
+  font-family: 'Poppins';
   src: url(./assets/media/fonts/Poppins/PoppinsMedium.ttf) format('truetype');
+  font-weight: 500;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'poppins-semibold';
+  font-family: 'Poppins';
   src: url(./assets/media/fonts/Poppins/PoppinsSemiBold.ttf) format('truetype');
+  font-weight: 600;
+  font-style: normal;
 }
