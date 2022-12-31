@@ -8,6 +8,8 @@ import { InlineSVGModule } from 'ng-inline-svg-2'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { Card1Component } from './components/cards/card1/card1.component'
+import { Card2Component } from './components/cards/card2/card2.component'
+import { FooterComponent } from './components/footer/footer.component'
 import { HeaderMenuComponent } from './components/header/header-menu/header-menu.component'
 import { HeaderComponent } from './components/header/header.component'
 import { ToolbarComponent } from './components/header/toolbar/toolbar.component'
@@ -18,8 +20,8 @@ import { Widget3Component } from './components/widgets/widget3/widget3.component
 import { Widget4Component } from './components/widgets/widget4/widget4.component'
 import { Widget5Component } from './components/widgets/widget5/widget5.component'
 import { DashboardComponent } from './pages/dashboard/dashboard.component'
-import { SigninComponent } from './pages/signin/signin.component';
-import { FooterComponent } from './components/footer/footer.component'
+import { SigninComponent } from './pages/signin/signin.component'
+import { SignupComponent } from './pages/signup/signup.component'
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { FooterComponent } from './components/footer/footer.component'
     Widget4Component,
     Widget5Component,
     FooterComponent,
+    SignupComponent,
+    Card2Component,
   ],
   imports: [
     BrowserModule,
