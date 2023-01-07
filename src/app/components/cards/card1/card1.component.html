@@ -19,7 +19,7 @@
             [(ngModel)]="username">
         </div>
         <div class="text-primary" [ngClass]="{'d-none': !usernameError}">Please enter your
-          username.</div>
+          username!</div>
       </div>
       <div class="col-12">
         <label for="password" class="form-label">Password</label> <input type="password"
@@ -34,7 +34,7 @@
         Invalid credentials!</div>
       <div class="col-12">
         <p class="small mb-0"><a class="text-primary cursor-pointer"
-            (click)="forgetPassword()">Forgot your password?</a>
+            routerLink="/forget-password">Forgot your password?</a>
       </div>
     </form>
   </div>

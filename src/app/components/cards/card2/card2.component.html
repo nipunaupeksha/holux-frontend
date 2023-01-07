@@ -9,17 +9,19 @@
       <h5 class="card-title text-center pb-0 fs-4">Create an Account</h5>
       <p class="text-center small">Enter your personal details to create account</p>
     </div>
-    <form class="row g-3 needs-validation" novalidate>
+    <form class="row g-3 needs-validation">
       <div class="col-12">
         <label for="fullname" class="form-label">Your Name</label> <input type="text"
           name="fullname" class="form-control" id="fullname" required
           [(ngModel)]="fullname">
-        <div class="invalid-feedback">Please, enter your full name!</div>
+        <div class="text-primary" [ngClass]="{'d-none':!fullnameError}">Please, enter your
+          full name!</div>
       </div>
       <div class="col-12">
         <label for="email" class="form-label">Your Email</label> <input type="email"
           name="email" class="form-control" id="email" required [(ngModel)]="email">
-        <div class="invalid-feedback">Please enter a valid Email adddress!</div>
+        <div class="text-primary" [ngClass]="{'d-none':!emailError}">Please enter a valid
+          Email address!</div>
       </div>
       <div class="col-12">
         <label for="username" class="form-label">Username</label>
@@ -27,27 +29,34 @@
           <span class="input-group-text" id="inputGroupPrepend">@</span> <input
             type="text" name="username" class="form-control" id="username" required
             [(ngModel)]="username">
-          <div class="invalid-feedback">Please choose a username.</div>
+          <div class="text-primary" [ngClass]="{'d-none':!usernameError}">Please choose a
+            username!</div>
         </div>
       </div>
       <div class="col-12">
-        <label for="type" class="form-label">User Type</label>
-        <select class="col-12 form-control text-left">
-          <option>User</option>
-          <option>Admin</option>
+        <label for="usertype" class="form-label">User Type</label>
+        <select [(ngModel)]="usertype" name="usertype" id="usertype"
+          class="col-12 form-control text-left" required>
+          <option *ngFor="let user_type of USER_TYPES" [ngValue]="user_type.id">
+            {{user_type.value}}
+          </option>
         </select>
-        <div class="invalid-feedback">Please select user type!</div>
+        <div class="text-primary" [ngClass]="{'d-none':!usertypeError}">Please choose a
+          user type!</div>
       </div>
       <div class="col-12">
         <label for="password" class="form-label">Password</label> <input type="password"
           name="password" class="form-control" id="password" required
           [(ngModel)]="password">
-        <div class="invalid-feedback">Please enter your password!</div>
+        <div class="text-primary" [ngClass]="{'d-none':!passwordError}">Please enter your
+          password!</div>
       </div>
       <div class="col-12">
         <label for="retypepassword" class="form-label">Re-type Password</label> <input
           type="password" name="retypepassword" class="form-control" id="retypepassword"
           required [(ngModel)]="retypePassword">
+        <div class="text-primary" [ngClass]="{'d-none':!retypePasswordError}">Please enter
+          re-type password!</div>
         <div class="text-primary" [ngClass]="{'d-none': !passwordsDoNotMatchError}">
           Passwords do not match!</div>
       </div>
@@ -60,8 +69,8 @@
         [ngClass]="{'d-none': !usernameAlreadyExistsError}">Username already credentials!
       </div>
       <div class="col-12">
-        <p class="small mb-0">Already have an account?&nbsp; <a
-            routerLink="/pages-login">Log in</a></p>
+        <p class="small mb-0">Already have an account?&nbsp; <a routerLink="/signin">Log
+            in</a></p>
       </div>
     </form>
   </div>
