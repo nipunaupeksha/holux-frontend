@@ -18,17 +18,23 @@
             type="text" name="username" class="form-control" id="username" required
             [(ngModel)]="username">
         </div>
-        <div class="text-primary" [ngClass]="{'d-none': !usernameError}">Please enter your username.</div>
+        <div class="text-primary" [ngClass]="{'d-none': !usernameError}">Please enter your
+          username.</div>
       </div>
       <div class="col-12">
-        <label for="yourPassword" class="form-label">Password</label> <input
-          type="password" name="password" class="form-control" id="yourPassword" required [(ngModel)]="password">
-        <div class="text-primary" [ngClass]="{'d-none': !passwordError}">Please enter your password!</div>
+        <label for="password" class="form-label">Password</label> <input type="password"
+          name="password" class="form-control" id="password" required
+          [(ngModel)]="password">
+        <div class="text-primary" [ngClass]="{'d-none': !passwordError}">Please enter your
+          password!</div>
       </div>
       <div class="col-12"> <button class="btn btn-primary w-100 mt-5 mb-3" type="submit"
           (click)="signin()" (keyup.enter)="signin()">Login</button></div>
+      <div class="text-primary text-center" [ngClass]="{'d-none': !invalidCredentials}">
+        Invalid credentials!</div>
       <div class="col-12">
-        <p class="small mb-0"><a class="text-primary cursor-pointer" (click)="forgetPassword()">Forgot your password?</a>
+        <p class="small mb-0"><a class="text-primary cursor-pointer"
+            (click)="forgetPassword()">Forgot your password?</a>
       </div>
     </form>
   </div>

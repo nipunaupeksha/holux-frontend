@@ -12,6 +12,7 @@ export class Card1Component implements OnInit {
   password: string = ''
   usernameError: boolean = false
   passwordError: boolean = false
+  invalidCredentials: boolean = false
 
   constructor(
     private userService: UserService,
@@ -29,9 +30,16 @@ export class Card1Component implements OnInit {
     })
   }
 
+  ngOnInit(): void {}
+
   signin() {
-    this.usernameError = this.username.trim().length == 0 ? true : false
-    this.passwordError = this.password.trim().length == 0 ? true : false
+    this.usernameError = this.username == undefined
+    this.passwordError = this.password == undefined
+
+    if (this.passwordError || this.usernameError) return
+
+    this.usernameError = this.username.trim().length == 0
+    this.passwordError = this.password.trim().length == 0
 
     if (this.passwordError || this.usernameError) return
 
@@ -40,7 +48,8 @@ export class Card1Component implements OnInit {
         this.router.navigate(['/dashboard'])
       },
       (error) => {
-        console.log(error)
+        this.invalidCredentials = true
+        //console.log(error)
       }
     )
   }
@@ -48,6 +57,4 @@ export class Card1Component implements OnInit {
   forgetPassword() {
     this.router.navigate(['/forgot-password'])
   }
-
-  ngOnInit(): void {}
 }
