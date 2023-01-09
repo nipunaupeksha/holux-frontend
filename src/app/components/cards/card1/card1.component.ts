@@ -18,8 +18,10 @@ export class Card1Component implements OnInit {
     private userService: UserService,
     private router: Router,
     private route: ActivatedRoute
-  ) {
-    route.queryParams.subscribe((data: any) => {
+  ) {}
+
+  ngOnInit(): void {
+    this.route.queryParams.subscribe((data: any) => {
       if (data) {
         this.username = data.username
         this.password = data.password
@@ -29,8 +31,6 @@ export class Card1Component implements OnInit {
       }
     })
   }
-
-  ngOnInit(): void {}
 
   signin() {
     this.usernameError = this.username == undefined

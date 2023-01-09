@@ -22,7 +22,9 @@ import { Widget4Component } from './components/widgets/widget4/widget4.component
 import { Widget5Component } from './components/widgets/widget5/widget5.component'
 import { DashboardComponent } from './pages/dashboard/dashboard.component'
 import { SigninComponent } from './pages/signin/signin.component'
-import { SignupComponent } from './pages/signup/signup.component'
+import { SignupComponent } from './pages/signup/signup.component';
+import { Card3Component } from './components/cards/card3/card3.component';
+import { ForgetPasswordComponent } from './pages/forget-password/forget-password.component'
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { SignupComponent } from './pages/signup/signup.component'
     FooterComponent,
     SignupComponent,
     Card2Component,
+    Card3Component,
+    ForgetPasswordComponent,
   ],
   imports: [
     BrowserModule,

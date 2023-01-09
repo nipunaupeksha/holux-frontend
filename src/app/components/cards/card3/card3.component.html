@@ -1,0 +1,24 @@
+<div class="d-flex justify-content-center py-4 flex-column align-items-center">
+  <span [inlineSVG]="'./assets/media/icons/duotune/abstract/abs005.svg'"
+    class="svg-icon svg-icon-3x svg-icon-primary mb-2"></span>
+  <span class="d-none d-lg-block fs-3 text-primary">Holux</span>
+</div>
+<div class="card mb-3">
+  <div class="card-body">
+    <div class="pt-4 pb-2">
+      <h5 class="card-title text-center pb-0 fs-4">Forgot Password?</h5>
+      <p class="text-center small">Enter your email to send a token</p>
+    </div>
+    <form class="row g-3 needs-validation">
+      <div class="col-12">
+        <label for="email" class="form-label">Your Email</label> <input type="email"
+          name="email" class="form-control" id="email" required [(ngModel)]="email">
+        <div class="text-primary" [ngClass]="{'d-none':!emailError}">Please enter a valid
+          Email address!</div>
+      </div>
+      <div class="col-12"> <button class="btn btn-primary w-100" type="submit"
+          (click)="sendemail()" (keyup.enter)="sendemail()">Send e-mail</button></div>
+    </form>
+  </div>
+</div>
+<div class="text-center pt-3 cursor-default"> Back to <span class="text-primary" routerLink="/signin">sign in</span></div>

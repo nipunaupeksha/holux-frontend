@@ -41,4 +41,10 @@ export class UserService {
       })
       .pipe(map((res) => res))
   }
+
+  public forgetpassword(email: string) {
+    return this.http
+      .post(this.BACKEND_URL + '/users/forgetpassword', { email: email })
+      .pipe(map((res) => res))
+  }
 }
