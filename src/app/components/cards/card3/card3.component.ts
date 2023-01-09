@@ -34,7 +34,9 @@ export class Card3Component implements OnInit {
     if (this.emailError) return
     this.userService.forgetpassword(this.email).subscribe(
       (data) => {
-        console.log(data)
+        this.router.navigate(['forget-password', 'token'], {
+          queryParams: { email: this.email },
+        })
       },
       (error) => console.log(error)
     )

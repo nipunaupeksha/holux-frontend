@@ -47,4 +47,13 @@ export class UserService {
       .post(this.BACKEND_URL + '/users/forgetpassword', { email: email })
       .pipe(map((res) => res))
   }
+
+  public validateToken(email: string, token: string) {
+    return this.http
+      .post(this.BACKEND_URL + '/users/forgetpassword/token', {
+        email: email,
+        token: token,
+      })
+      .pipe(map((res) => res))
+  }
 }

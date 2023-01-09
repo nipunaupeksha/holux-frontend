@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { Card1Component } from './components/cards/card1/card1.component'
 import { Card2Component } from './components/cards/card2/card2.component'
+import { Card3Component } from './components/cards/card3/card3.component'
+import { Card4Component } from './components/cards/card4/card4.component'
 import { FooterComponent } from './components/footer/footer.component'
 import { HeaderMenuComponent } from './components/header/header-menu/header-menu.component'
 import { HeaderComponent } from './components/header/header.component'
@@ -21,10 +23,12 @@ import { Widget3Component } from './components/widgets/widget3/widget3.component
 import { Widget4Component } from './components/widgets/widget4/widget4.component'
 import { Widget5Component } from './components/widgets/widget5/widget5.component'
 import { DashboardComponent } from './pages/dashboard/dashboard.component'
+import { ForgetPasswordTokenComponent } from './pages/forget-password-token/forget-password-token.component'
+import { ForgetPasswordComponent } from './pages/forget-password/forget-password.component'
 import { SigninComponent } from './pages/signin/signin.component'
 import { SignupComponent } from './pages/signup/signup.component';
-import { Card3Component } from './components/cards/card3/card3.component';
-import { ForgetPasswordComponent } from './pages/forget-password/forget-password.component'
+import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
+import { Card5Component } from './components/cards/card5/card5.component'
 
 @NgModule({
   declarations: [
@@ -46,6 +50,10 @@ import { ForgetPasswordComponent } from './pages/forget-password/forget-password
     Card2Component,
     Card3Component,
     ForgetPasswordComponent,
+    Card4Component,
+    ForgetPasswordTokenComponent,
+    ResetPasswordComponent,
+    Card5Component,
   ],
   imports: [
     BrowserModule,

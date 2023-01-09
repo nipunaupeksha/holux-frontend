@@ -7,17 +7,18 @@
   <div class="card-body">
     <div class="pt-4 pb-2">
       <h5 class="card-title text-center pb-0 fs-4">Forgot Password?</h5>
-      <p class="text-center small">Enter your email to send a token</p>
+      <p class="text-center small">Enter the token sent to your mail</p>
     </div>
     <form class="row g-3 needs-validation">
       <div class="col-12">
-        <label for="email" class="form-label">Your Email</label> <input type="email"
-          name="email" class="form-control" id="email" required [(ngModel)]="email">
-        <div class="text-primary" [ngClass]="{'d-none':!emailError}">Please enter a valid
+        <label for="email" class="form-label">Token</label> <input type="email"
+          name="email" class="form-control" id="email" required [(ngModel)]="token">
+        <div class="text-primary" [ngClass]="{'d-none':!tokenError}">Please enter a valid
           Email address!</div>
       </div>
       <div class="col-12"> <button class="btn btn-primary w-100" type="submit"
-          (click)="sendemail()" (keyup.enter)="sendemail()">Send e-mail</button></div>
+          (click)="checktoken()" (keyup.enter)="checktoken()">Validate Token</button>
+      </div>
     </form>
   </div>
 </div>
