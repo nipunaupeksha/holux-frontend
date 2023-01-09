@@ -1,1 +1,31 @@
-<p>card5 works!</p>
+<div class="d-flex justify-content-center py-4 flex-column align-items-center">
+  <span [inlineSVG]="'./assets/media/icons/duotune/abstract/abs005.svg'"
+    class="svg-icon svg-icon-3x svg-icon-primary mb-2"></span>
+  <span class="d-none d-lg-block fs-3 text-primary">Holux</span>
+</div>
+<div class="card mb-3">
+  <div class="card-body">
+    <div class="pt-4 pb-2">
+      <h5 class="card-title text-center pb-0 fs-4">Change Password</h5>
+      <p class="text-center small">Change your password</p>
+    </div>
+    <form class="row g-3 needs-validation">
+      <div class="col-12">
+        <label for="password" class="form-label">Password</label> <input type="password"
+          name="password" class="form-control" id="password" required [(ngModel)]="password">
+        <div class="text-primary" [ngClass]="{'d-none':!passwordError}">Please enter your password!</div>
+      </div>
+      <div class="col-12">
+        <label for="retypePassword" class="form-label">Re-type Password</label> <input type="password"
+          name="retypePassword" class="form-control" id="retypePassword" required [(ngModel)]="retypePassword">
+        <div class="text-primary" [ngClass]="{'d-none':!retypePasswordError}">Please enter re-type password!</div>
+          <div class="text-primary" [ngClass]="{'d-none':!passwordsDoNotMatchError}">Passwords do not match!</div>
+      </div>
+      <div class="col-12"> <button class="btn btn-primary w-100" type="submit"
+          (click)="changePassword()" (keyup.enter)="changePassword()">Change Password</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="text-center pt-3 cursor-default"> Back to <span class="text-primary"
+    routerLink="/signin">Sign In</span></div>

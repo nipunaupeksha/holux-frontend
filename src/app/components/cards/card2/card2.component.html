@@ -52,8 +52,8 @@
           password!</div>
       </div>
       <div class="col-12">
-        <label for="retypepassword" class="form-label">Re-type Password</label> <input
-          type="password" name="retypepassword" class="form-control" id="retypepassword"
+        <label for="retypePassword" class="form-label">Re-type Password</label> <input
+          type="password" name="retypePassword" class="form-control" id="retypePassword"
           required [(ngModel)]="retypePassword">
         <div class="text-primary" [ngClass]="{'d-none':!retypePasswordError}">Please enter
           re-type password!</div>
@@ -61,7 +61,7 @@
           Passwords do not match!</div>
       </div>
       <div class="col-12"> <button class="btn btn-primary w-100" type="submit"
-          (click)="signup()" (keyup.enter)="signup()">Create
+          (click)="signUp()" (keyup.enter)="signUp()">Create
           Account</button></div>
       <div class="text-primary text-center"
         [ngClass]="{'d-none': !emailAlreadyExistsError}">Email already exists!</div>
@@ -69,7 +69,7 @@
         [ngClass]="{'d-none': !usernameAlreadyExistsError}">Username already credentials!
       </div>
       <div class="col-12">
-        <p class="small mb-0">Already have an account?&nbsp; <a routerLink="/signin">Log
+        <p class="small mb-0">Already have an account?&nbsp; <a routerLink="/sign-in">Log
             in</a></p>
       </div>
     </form>

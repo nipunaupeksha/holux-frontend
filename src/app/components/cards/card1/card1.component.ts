@@ -14,25 +14,11 @@ export class Card1Component implements OnInit {
   passwordError: boolean = false
   invalidCredentials: boolean = false
 
-  constructor(
-    private userService: UserService,
-    private router: Router,
-    private route: ActivatedRoute
-  ) {}
+  constructor(private userService: UserService, private router: Router) {}
 
-  ngOnInit(): void {
-    this.route.queryParams.subscribe((data: any) => {
-      if (data) {
-        this.username = data.username
-        this.password = data.password
-      } else {
-        this.username = ''
-        this.password = ''
-      }
-    })
-  }
+  ngOnInit(): void {}
 
-  signin() {
+  signIn() {
     this.usernameError = this.username == undefined
     this.passwordError = this.password == undefined
 
@@ -43,7 +29,7 @@ export class Card1Component implements OnInit {
 
     if (this.passwordError || this.usernameError) return
 
-    this.userService.signin(this.username, this.password).subscribe(
+    this.userService.signIn(this.username, this.password).subscribe(
       (data) => {
         this.router.navigate(['/dashboard'])
       },

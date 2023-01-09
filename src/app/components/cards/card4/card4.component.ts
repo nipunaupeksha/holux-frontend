@@ -19,18 +19,16 @@ export class Card4Component implements OnInit {
 
   ngOnInit(): void {
     console.log(this.route.snapshot.queryParams)
-    this.route.queryParams.subscribe((data: Params) => {
-      if (data) {
-        this.email = data['email']
-        this.token = data['token']
+    this.route.queryParams.subscribe((params: Params) => {
+      if (params) {
+        this.email = params['email']
       } else {
-        this.token = ''
         this.email = ''
       }
     })
   }
 
-  checktoken() {
+  validateToken() {
     this.tokenError = this.token == undefined
     if (this.tokenError) return
     this.tokenError = this.token.trim().length == 0
@@ -39,6 +37,9 @@ export class Card4Component implements OnInit {
     this.userService.validateToken(this.email, this.token).subscribe(
       (data) => {
         console.log(data)
+        this.router.navigate(['/forget-password', 'change-password'], {
+          queryParams: { email: this.email },
+        })
       },
       (error) => console.log(error)
     )

@@ -9,12 +9,12 @@ import { SignupComponent } from './pages/signup/signup.component'
 
 const routes: Routes = [
   { path: '', component: SigninComponent },
-  { path: 'signin', component: SigninComponent },
-  { path: 'signup', component: SignupComponent },
+  { path: 'sign-in', component: SigninComponent },
+  { path: 'sign-up', component: SignupComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'forget-password', component: ForgetPasswordComponent },
   { path: 'forget-password/token', component: ForgetPasswordTokenComponent },
-  { path: '**', redirectTo: '/signin' },
+  { path: '**', redirectTo: '/sign-in' },
 ]
 
 @NgModule({

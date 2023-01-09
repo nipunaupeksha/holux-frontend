@@ -11,28 +11,16 @@ export class Card3Component implements OnInit {
   email: string = ''
   emailError: boolean = false
 
-  constructor(
-    private userService: UserService,
-    private route: ActivatedRoute,
-    private router: Router
-  ) {}
+  constructor(private userService: UserService, private router: Router) {}
 
-  ngOnInit(): void {
-    this.route.queryParams.subscribe((data: any) => {
-      if (data) {
-        this.email = data.email
-      } else {
-        this.email = ''
-      }
-    })
-  }
+  ngOnInit(): void {}
 
-  sendemail() {
+  sendEmail() {
     this.emailError = this.email == undefined
     if (this.emailError) return
     this.emailError = this.email.trim().length == 0
     if (this.emailError) return
-    this.userService.forgetpassword(this.email).subscribe(
+    this.userService.forgetPassword(this.email).subscribe(
       (data) => {
         this.router.navigate(['forget-password', 'token'], {
           queryParams: { email: this.email },

@@ -32,33 +32,11 @@ export class Card2Component implements OnInit {
   emailAlreadyExistsError: boolean = false
   passwordsDoNotMatchError: boolean = false
 
-  constructor(
-    private userService: UserService,
-    private router: Router,
-    private route: ActivatedRoute
-  ) {}
+  constructor(private userService: UserService, private router: Router) {}
 
-  ngOnInit(): void {
-    this.route.queryParams.subscribe((data: any) => {
-      if (data) {
-        this.fullname = data.fullname
-        this.email = data.email
-        this.username = data.username
-        this.password = data.password
-        this.retypePassword = data.retypePassword
-        this.usertype = data.type
-      } else {
-        this.fullname = ''
-        this.email = ''
-        this.username = ''
-        this.password = ''
-        this.retypePassword = ''
-        this.usertype = 'USER'
-      }
-    })
-  }
+  ngOnInit(): void {}
 
-  signup() {
+  signUp() {
     this.fullnameError = this.fullname == undefined
     this.emailError = this.email == undefined
     this.usernameError = this.username == undefined
@@ -97,7 +75,7 @@ export class Card2Component implements OnInit {
     if (this.passwordsDoNotMatchError) return
 
     this.userService
-      .signup(this.username, this.email, this.password, this.fullname, this.usertype)
+      .signUp(this.username, this.email, this.password, this.fullname, this.usertype)
       .subscribe(
         (data) => {
           console.log(data)

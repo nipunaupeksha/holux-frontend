@@ -11,13 +11,12 @@
     </div>
     <form class="row g-3 needs-validation">
       <div class="col-12">
-        <label for="email" class="form-label">Token</label> <input type="email"
-          name="email" class="form-control" id="email" required [(ngModel)]="token">
-        <div class="text-primary" [ngClass]="{'d-none':!tokenError}">Please enter a valid
-          Email address!</div>
+        <label for="token" class="form-label">Token</label> <input type="text"
+          name="token" class="form-control" id="token" required [(ngModel)]="token">
+        <div class="text-primary" [ngClass]="{'d-none':!tokenError}">Please enter a the token sent to your mail!</div>
       </div>
       <div class="col-12"> <button class="btn btn-primary w-100" type="submit"
-          (click)="checktoken()" (keyup.enter)="checktoken()">Validate Token</button>
+          (click)="validateToken()" (keyup.enter)="validateToken()">Validate Token</button>
       </div>
     </form>
   </div>

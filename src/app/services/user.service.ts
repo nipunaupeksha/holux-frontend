@@ -15,16 +15,16 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
-  public signin(username: string, password: string) {
+  public signIn(username: string, password: string) {
     return this.http
-      .post(this.BACKEND_URL + '/users/signin', {
+      .post(this.BACKEND_URL + '/users/sign-in', {
         username: username,
         password: password,
       })
       .pipe(map((res) => res))
   }
 
-  public signup(
+  public signUp(
     username: string,
     email: string,
     password: string,
@@ -32,7 +32,7 @@ export class UserService {
     type: string
   ) {
     return this.http
-      .post(this.BACKEND_URL + '/users/signup', {
+      .post(this.BACKEND_URL + '/users/sign-up', {
         username: username,
         email: email,
         password: password,
@@ -42,17 +42,26 @@ export class UserService {
       .pipe(map((res) => res))
   }
 
-  public forgetpassword(email: string) {
+  public forgetPassword(email: string) {
     return this.http
-      .post(this.BACKEND_URL + '/users/forgetpassword', { email: email })
+      .post(this.BACKEND_URL + '/users/forget-password', { email: email })
       .pipe(map((res) => res))
   }
 
   public validateToken(email: string, token: string) {
     return this.http
-      .post(this.BACKEND_URL + '/users/forgetpassword/token', {
+      .post(this.BACKEND_URL + '/users/forget-password/token', {
         email: email,
         token: token,
+      })
+      .pipe(map((res) => res))
+  }
+
+  public changePassword(email: string, password: string) {
+    return this.http
+      .post(this.BACKEND_URL + '/users/forget-password/change-password', {
+        email: email,
+        password: password,
       })
       .pipe(map((res) => res))
   }
