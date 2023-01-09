@@ -28,7 +28,8 @@ import { ForgetPasswordComponent } from './pages/forget-password/forget-password
 import { SigninComponent } from './pages/signin/signin.component'
 import { SignupComponent } from './pages/signup/signup.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
-import { Card5Component } from './components/cards/card5/card5.component'
+import { Card5Component } from './components/cards/card5/card5.component';
+import { DoubleClickPreventionDirective } from './directives/double-click-prevention.directive'
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { Card5Component } from './components/cards/card5/card5.component'
     ForgetPasswordTokenComponent,
     ResetPasswordComponent,
     Card5Component,
+    DoubleClickPreventionDirective,
   ],
   imports: [
     BrowserModule,
