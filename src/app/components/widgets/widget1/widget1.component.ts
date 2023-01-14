@@ -16,6 +16,7 @@ export class Widget1Component implements OnInit {
   noOfSales: number = 0
   outlets = new Set()
 
+  selectedOutlet: string
   dropDownMenu: boolean = false
 
   ngOnInit(): void {
@@ -37,5 +38,10 @@ export class Widget1Component implements OnInit {
     } else {
       this.dropDownMenu = true
     }
+  }
+
+  getSelectedOutlets(event: string) {
+    this.selectedOutlet = event
+    this.dropDownMenu = false
   }
 }

@@ -31,6 +31,7 @@ import { ForgetPasswordComponent } from './pages/forget-password/forget-password
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component'
 import { SigninComponent } from './pages/signin/signin.component'
 import { SignupComponent } from './pages/signup/signup.component'
+import { FilterPipe } from './pipes/filter.pipe'
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { SignupComponent } from './pages/signup/signup.component'
     Card5Component,
     DoubleClickPreventionDirective,
     Dropdown1Component,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
