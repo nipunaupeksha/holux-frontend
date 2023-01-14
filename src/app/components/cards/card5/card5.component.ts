@@ -39,5 +39,14 @@ export class Card5Component implements OnInit {
 
     this.passwordsDoNotMatchError = this.password != this.retypePassword
     if (this.passwordsDoNotMatchError) return
+
+    this.userService.changePassword(this.email, this.password).subscribe(
+      (data) => {
+        this.router.navigate(['/dashboard'])
+      },
+      (error) => {
+        console.log(error)
+      }
+    )
   }
 }

@@ -12,17 +12,23 @@
     <form class="row g-3 needs-validation">
       <div class="col-12">
         <label for="password" class="form-label">Password</label> <input type="password"
-          name="password" class="form-control" id="password" required [(ngModel)]="password">
-        <div class="text-primary" [ngClass]="{'d-none':!passwordError}">Please enter your password!</div>
+          name="password" class="form-control" id="password" required
+          [(ngModel)]="password">
+        <div class="text-primary" [ngClass]="{'d-none':!passwordError}">Please enter your
+          password!</div>
       </div>
       <div class="col-12">
-        <label for="retypePassword" class="form-label">Re-type Password</label> <input type="password"
-          name="retypePassword" class="form-control" id="retypePassword" required [(ngModel)]="retypePassword">
-        <div class="text-primary" [ngClass]="{'d-none':!retypePasswordError}">Please enter re-type password!</div>
-          <div class="text-primary" [ngClass]="{'d-none':!passwordsDoNotMatchError}">Passwords do not match!</div>
+        <label for="retypePassword" class="form-label">Re-type Password</label> <input
+          type="password" name="retypePassword" class="form-control" id="retypePassword"
+          required [(ngModel)]="retypePassword">
+        <div class="text-primary" [ngClass]="{'d-none':!retypePasswordError}">Please enter
+          re-type password!</div>
+        <div class="text-primary" [ngClass]="{'d-none':!passwordsDoNotMatchError}">
+          Passwords do not match!</div>
       </div>
       <div class="col-12"> <button class="btn btn-primary w-100" type="submit"
-          (click)="changePassword()" (keyup.enter)="changePassword()">Change Password</button>
+          (click)="changePassword()" (keyup.enter)="changePassword()">Change
+          Password</button>
       </div>
     </form>
   </div>

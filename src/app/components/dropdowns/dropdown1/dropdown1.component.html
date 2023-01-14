@@ -1,0 +1,29 @@
+<div class="px-1 py-1">
+  <div class="fs-5 text-dark fw-bolder">Filter Options</div>
+</div>
+
+<div class="separator border-gray-200"></div>
+
+<div class="px-1 py-2">
+  <div class="mb-10">
+    <label class="form-label fw-bold">Outlets:</label>
+
+    <div class="d-flex">
+      <label *ngFor="let item of items;"
+        class="form-check form-check-sm form-check-custom form-check-solid me-5 mb-1">
+        <input #checkboxes class="form-check-input" type="checkbox" [value]="item" checked="true"  ngModel="selectedValue"/>
+        <span class="form-check-label">{{item}}</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-end">
+    <button type="reset" class="btn btn-sm btn-white btn-active-light-primary me-2" (click)="resetCheckBoxes()">
+      Reset
+    </button>
+
+    <button type="submit" class="btn btn-sm btn-primary" (click)="getSelectedCheckBoxes()">
+      Apply
+    </button>
+  </div>
+</div>

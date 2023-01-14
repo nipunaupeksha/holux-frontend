@@ -13,13 +13,15 @@
       <div class="col-12">
         <label for="token" class="form-label">Token</label> <input type="text"
           name="token" class="form-control" id="token" required [(ngModel)]="token">
-        <div class="text-primary" [ngClass]="{'d-none':!tokenError}">Please enter a the token sent to your mail!</div>
+        <div class="text-primary" [ngClass]="{'d-none':!tokenError}">Please enter a the
+          token sent to your mail!</div>
       </div>
       <div class="col-12"> <button class="btn btn-primary w-100" type="submit"
-          (click)="validateToken()" (keyup.enter)="validateToken()">Validate Token</button>
+          (click)="validateToken()" (keyup.enter)="validateToken()">Validate
+          Token</button>
       </div>
     </form>
   </div>
 </div>
 <div class="text-center pt-3 cursor-default"> Back to <span class="text-primary"
-    routerLink="/signin">sign in</span></div>
+    routerLink="/signin">Sign In</span></div>
