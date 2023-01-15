@@ -1,0 +1,56 @@
+<div class="d-flex align-items-stretch flex-shrink-0 pt-2 toolbar">
+  <!--begin::dashboard-->
+  <div class="d-flex align-items-stretch ms-1 ms-lg-3" *ngIf="usertype == 'ADMIN'">
+    <div class="d-flex align-items-stretch">
+      <div class="d-flex align-items-center">
+        <div
+          class="btn btn-icon btn-icon-muted btn-active-light btn-active-color-primary w-30px h-30px w-md-40px h-md-40px" (click)="viewDashboard()">
+          <span [inlineSVG]="'./assets/media/icons/duotune/general/gen008.svg'"
+            class="svg-icon svg-icon-1">
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--begin::dashboard-->
+  <!--begin::time-->
+  <div class="d-flex align-items-stretch ms-1 ms-lg-3">
+    <div class="d-flex align-items-stretch">
+      <div class="d-flex align-items-center">
+        <div
+          class="d-flex align-items-center cursor-default justify-content-center text-dark fw-bold w-100px h-30px w-md-100px h-md-40px">
+          <span> {{currentTime|date:'hh:mm:ss a'}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--begin::time-->
+  <!--begin::username-->
+  <div class="d-flex align-items-stretch ms-1 ms-lg-3">
+    <div class="d-flex align-items-stretch">
+      <div class="d-flex align-items-center">
+        <div
+          class="d-flex align-items-center cursor-default text-primary fw-bold w-120px h-30px w-md-120px h-md-40px">
+          <span> {{username}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--begin::username-->
+  <!--begin::logout-->
+  <div class="d-flex align-items-stretch ms-1 ms-lg-3">
+    <div class="d-flex align-items-stretch">
+      <div class="d-flex align-items-center">
+        <div
+          class="btn btn-icon btn-icon-muted btn-active-light btn-active-color-primary w-30px h-30px w-md-40px h-md-40px" (click)="signOut()">
+          <span [inlineSVG]="'./assets/media/icons/duotune/arrows/arr077.svg'"
+            class="svg-icon svg-icon-1">
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--begin::logout-->
+</div>

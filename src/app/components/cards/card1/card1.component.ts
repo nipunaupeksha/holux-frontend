@@ -31,7 +31,7 @@ export class Card1Component implements OnInit {
 
     this.userService.signIn(this.username, this.password).subscribe(
       (data) => {
-        this.router.navigate(['/dashboard'])
+        this.router.navigate(['/pos-system'])
       },
       (error) => {
         this.invalidCredentials = true

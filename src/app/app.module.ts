@@ -32,7 +32,9 @@ import { ResetPasswordComponent } from './pages/reset-password/reset-password.co
 import { SigninComponent } from './pages/signin/signin.component'
 import { SignupComponent } from './pages/signup/signup.component'
 import { FilterPipe } from './pipes/filter.pipe';
-import { PosComponent } from './pages/pos/pos.component'
+import { PosComponent } from './pages/pos/pos.component';
+import { UserLogoutComponent } from './components/partials/user-logout/user-logout.component';
+import { Widget6Component } from './components/widgets/widget6/widget6.component'
 
 @NgModule({
   declarations: [
@@ -62,6 +64,8 @@ import { PosComponent } from './pages/pos/pos.component'
     Dropdown1Component,
     FilterPipe,
     PosComponent,
+    UserLogoutComponent,
+    Widget6Component,
   ],
   imports: [
     BrowserModule,
