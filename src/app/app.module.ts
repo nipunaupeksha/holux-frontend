@@ -19,22 +19,22 @@ import { HeaderMenuComponent } from './components/header/header-menu/header-menu
 import { HeaderComponent } from './components/header/header.component'
 import { ToolbarComponent } from './components/header/toolbar/toolbar.component'
 import { TopbarComponent } from './components/header/topbar/topbar.component'
+import { UserLogoutComponent } from './components/partials/user-logout/user-logout.component'
 import { Widget1Component } from './components/widgets/widget1/widget1.component'
 import { Widget2Component } from './components/widgets/widget2/widget2.component'
 import { Widget3Component } from './components/widgets/widget3/widget3.component'
 import { Widget4Component } from './components/widgets/widget4/widget4.component'
 import { Widget5Component } from './components/widgets/widget5/widget5.component'
+import { Widget6Component } from './components/widgets/widget6/widget6.component'
 import { DoubleClickPreventionDirective } from './directives/double-click-prevention.directive'
 import { DashboardComponent } from './pages/dashboard/dashboard.component'
 import { ForgetPasswordTokenComponent } from './pages/forget-password-token/forget-password-token.component'
 import { ForgetPasswordComponent } from './pages/forget-password/forget-password.component'
+import { PosComponent } from './pages/pos/pos.component'
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component'
 import { SigninComponent } from './pages/signin/signin.component'
 import { SignupComponent } from './pages/signup/signup.component'
-import { FilterPipe } from './pipes/filter.pipe';
-import { PosComponent } from './pages/pos/pos.component';
-import { UserLogoutComponent } from './components/partials/user-logout/user-logout.component';
-import { Widget6Component } from './components/widgets/widget6/widget6.component'
+import { FilterPipe } from './pipes/filter.pipe'
 
 @NgModule({
   declarations: [

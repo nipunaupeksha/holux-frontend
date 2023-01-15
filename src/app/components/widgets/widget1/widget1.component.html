@@ -2,7 +2,8 @@
 <div class="card-header align-items-center border-0 mt-4">
   <h3 class="card-title align-items-start flex-column">
     <span class="fw-bolder mb-2 text-dark cursor-default">Total Sales</span>
-    <span class="text-muted fw-bold fs-7 cursor-default">All outlet sales #{{noOfSales | number:'1.0':'en-US'}}
+    <span class="text-muted fw-bold fs-7 cursor-default">All outlet sales
+      #{{noOfSales | number:'1.0':'en-US'}}
       Sales</span>
   </h3>
   <div class="card-toolbar">
@@ -28,8 +29,7 @@
   </ng-template>
   <div class="timeline-label" *ngIf="selectedOutlet==null">
     <!-- begin::Item-->
-    <div class="timeline-item"
-      *ngFor="let order of allOrders">
+    <div class="timeline-item" *ngFor="let order of allOrders">
       <div class="timeline-label fw-bolder text-gray-800 fs-6">
         {{order.orderts|date:"H:mm"}}
       </div>
