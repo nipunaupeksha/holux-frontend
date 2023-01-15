@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Injectable } from '@angular/core'
 import { map } from 'rxjs'
 
+import { AnnualSales } from '../interfaces/annualsales.model'
 import { Order } from '../interfaces/order.model'
 
 @Injectable({
@@ -35,5 +36,19 @@ export class OrderService {
           return orderArr
         })
       )
+  }
+
+  public getAnnualSales() {
+    return this.http.get(this.BACKEND_URL + '/orders/get-annual-sales').pipe(
+      map((res) => {
+        const salesArr: AnnualSales[] = []
+        for (const key in res) {
+          if (key == 'data') {
+            salesArr.push(...res[key])
+          }
+        }
+        return salesArr
+      })
+    )
   }
 }

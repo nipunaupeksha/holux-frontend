@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core'
+import { AnnualSales } from 'src/app/interfaces/annualsales.model'
+import { OrderService } from 'src/app/services/order-service.service'
 
 @Component({
   selector: 'app-widget2',
@@ -9,61 +11,96 @@ export class Widget2Component implements OnInit {
   @Input() chartColor: string = ''
   @Input() chartHeight: string = '150px'
 
+  currentYear = new Date().getFullYear()
+  selectedAnnualSales: number[] = []
+  sumOfSales: number = 0
+
   chartOptions: any = {}
 
-  constructor() {
-    this.chartOptions = getChartOptions(this.chartHeight, this.chartColor)
-  }
+  constructor(private orderService: OrderService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.orderService.getAnnualSales().subscribe(
+      (data: AnnualSales[]) => {
+        let annualSales = data
+        for (let i = 0; i < annualSales.length; i++) {
+          if (annualSales[i].year == this.currentYear.toString()) {
+            this.sumOfSales += annualSales[i].sum
+            this.selectedAnnualSales.push(annualSales[i].sum)
+          }
+        }
+        while (this.selectedAnnualSales.length != 12) {
+          this.selectedAnnualSales.push(0)
+        }
+      },
+      (error) => {}
+    )
+
+    console.log(this.selectedAnnualSales[0])
+    console.log(this.selectedAnnualSales)
+
+    this.chartOptions = getChartOptions(
+      this.chartHeight,
+      this.chartColor,
+      this.selectedAnnualSales
+    )
+  }
 }
 
-function getChartOptions(chartHeight: string, chartColor: string) {
+function getChartOptions(chartHeight: string, chartColor: string, data: number[]) {
   const labelColor = '#000'
-  const strokeColor = '#000'
-  const baseColor = '#F00'
-  const lightColor = 'FF0'
+  const baseColor = '#3699ff'
+  const borderColor = '#3699ff'
+  const secondaryColor = '#f1faff'
 
   return {
     series: [
       {
         name: 'Net Profit',
-        data: [15, 25, 15, 40, 20, 50],
+        data: data,
       },
     ],
     chart: {
       fontFamily: 'inherit',
-      type: 'area',
+      type: 'bar',
       height: chartHeight,
       toolbar: {
         show: false,
       },
-      zoom: {
-        enabled: false,
-      },
-      sparkline: {
-        enabled: true,
+    },
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        columnWidth: '50%',
+        borderRadius: 5,
       },
     },
-    plotOptions: {},
     legend: {
       show: false,
     },
     dataLabels: {
       enabled: false,
     },
-    fill: {
-      type: 'solid',
-      opacity: 1,
-    },
     stroke: {
-      curve: 'smooth',
       show: true,
-      width: 3,
-      colors: [baseColor],
+      width: 2,
+      colors: ['transparent'],
     },
     xaxis: {
-      categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+      categories: [
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Sep',
+        'Oct',
+        'Nov',
+        'Dec',
+      ],
       axisBorder: {
         show: false,
       },
@@ -71,35 +108,22 @@ function getChartOptions(chartHeight: string, chartColor: string) {
         show: false,
       },
       labels: {
-        show: false,
         style: {
           colors: labelColor,
           fontSize: '12px',
         },
-      },
-      crosshairs: {
-        show: false,
-        position: 'front',
-        stroke: {
-          color: strokeColor,
-          width: 1,
-          dashArray: 3,
-        },
-      },
-      tooltip: {
-        enabled: false,
       },
     },
     yaxis: {
-      min: 0,
-      max: 60,
       labels: {
-        show: false,
         style: {
           colors: labelColor,
           fontSize: '12px',
         },
       },
+    },
+    fill: {
+      type: 'solid',
     },
     states: {
       normal: {
@@ -128,15 +152,22 @@ function getChartOptions(chartHeight: string, chartColor: string) {
       },
       y: {
         formatter: function (val: number) {
-          return '$' + val + ' thousands'
+          return '$' + val + ' revenue'
         },
       },
     },
-    colors: [lightColor],
-    markers: {
-      colors: [lightColor],
-      strokeColors: [baseColor],
-      strokeWidth: 3,
+    colors: [baseColor],
+    grid: {
+      padding: {
+        top: 10,
+      },
+      borderColor: borderColor,
+      strokeDashArray: 4,
+      yaxis: {
+        lines: {
+          show: true,
+        },
+      },
     },
   }
 }

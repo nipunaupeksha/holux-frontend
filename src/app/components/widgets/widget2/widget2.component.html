@@ -2,16 +2,14 @@
   <div class="flex-grow-1 card-p pb-0">
     <div class="d-flex flex-stack flex-wrap">
       <div class="me-2">
-        <a href="#" class="text-dark text-hover-primary fw-bolder fs-3">
-          Generate Reports
-        </a>
-
-        <div class="text-muted fs-7 fw-bold">
-          Finance and accounting reports
+        <h3 class="text-dark fw-bolder fs-3 cursor-default">
+          Annual Income
+        </h3>
+        <div class="text-muted fs-7 fw-bold cursor-default">
+          Total income from all the outlets
         </div>
       </div>
-
-      <div class="fw-bolder fs-3" [ngClass]="'text-' + chartColor">$24,500</div>
+      <div class="fw-bolder fs-3" [ngClass]="'text-' + chartColor">Rs.{{sumOfSales}}</div>
     </div>
   </div>
 
