@@ -26,6 +26,7 @@ import { Widget3Component } from './components/widgets/widget3/widget3.component
 import { Widget4Component } from './components/widgets/widget4/widget4.component'
 import { Widget5Component } from './components/widgets/widget5/widget5.component'
 import { Widget6Component } from './components/widgets/widget6/widget6.component'
+import { Widget7Component } from './components/widgets/widget7/widget7.component'
 import { DoubleClickPreventionDirective } from './directives/double-click-prevention.directive'
 import { DashboardComponent } from './pages/dashboard/dashboard.component'
 import { ForgetPasswordTokenComponent } from './pages/forget-password-token/forget-password-token.component'
@@ -34,8 +35,7 @@ import { PosComponent } from './pages/pos/pos.component'
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component'
 import { SigninComponent } from './pages/signin/signin.component'
 import { SignupComponent } from './pages/signup/signup.component'
-import { FilterPipe } from './pipes/filter.pipe';
-import { Widget7Component } from './components/widgets/widget7/widget7.component'
+import { FilterPipe } from './pipes/filter.pipe'
 
 @NgModule({
   declarations: [
