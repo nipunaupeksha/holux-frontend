@@ -1,5 +1,5 @@
 <!-- begin::Header -->
-<div class="card-header align-items-center border-0 mt-4">
+<div class="card-header align-items-center border-0 mt-5">
   <h3 class="card-title align-items-start flex-column">
     <span class="fw-bolder mb-2 text-dark cursor-default">Select items</span>
     <span class="text-muted fw-bold fs-7 cursor-default">All available items</span>
@@ -8,7 +8,7 @@
 <!-- end::Header -->
 <!-- begin::Body -->
 <!-- end::Body -->
-<div class="card-body pt-1" [ngStyle]="{overflowY: 'auto', maxHeight: '400px', minHeight:'400px'}">
+<div class="card-body pt-1">
   <!-- begin::Input -->
   <div class="row g-0">
     <div class="col-8">
@@ -46,21 +46,23 @@
     </div>
   </div>
   <!--begin::items-->
-  <div class="d-flex flex-row justify-content-between g-xl-8 gy-5 mt-5"
-    *ngFor="let item of items">
-    <div class="col-3 d-flex flex-row align-items-center justify-content-start">
-      <p class="fs-7 cursor-default">{{item.code}}</p>
+  <div [ngStyle]="{overflowY: 'auto', maxHeight: '480px', minHeight:'480px'}">
+    <div class="d-flex flex-row justify-content-between g-xl-8 gy-5 mt-5"
+      *ngFor="let item of items">
+      <div class="col-3 d-flex flex-row align-items-center justify-content-start">
+        <p class="fs-7 cursor-default">{{item.code}}</p>
+      </div>
+      <div class="col-3 d-flex flex-row align-items-center justify-content-center">
+        <p class="fs-7 cursor-default">{{item.name}}</p>
+      </div>
+      <div class="col-3 d-flex flex-row align-items-center justify-content-end">
+        <p class="fs-7 cursor-default">{{item.price}}</p>
+      </div>
+      <div class="col-3 d-flex flex-row align-items-center justify-content-end">
+        <p class="fs-7 cursor-default">{{item.stock}}</p>
+      </div>
     </div>
-    <div class="col-3 d-flex flex-row align-items-center justify-content-center">
-      <p class="fs-7 cursor-default">{{item.name}}</p>
-    </div>
-    <div class="col-3 d-flex flex-row align-items-center justify-content-end">
-      <p class="fs-7 cursor-default">{{item.price}}</p>
-    </div>
-    <div class="col-3 d-flex flex-row align-items-center justify-content-end">
-      <p class="fs-7 cursor-default">{{item.stock}}</p>
-    </div>
+    <!--end::items-->
+    <!--end::table-->
   </div>
-  <!--end::items-->
-  <!--end::table-->
 </div>
