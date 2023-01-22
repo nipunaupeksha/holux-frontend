@@ -6,36 +6,45 @@
       bill</span>
   </h3>
 </div>
-<!-- end:: Header -->
-<div class="card-body pt-5">
-  <div class="d-flex flex-row justify-content-between g-xl-8 gy-5">
-    <h3 class="text-muted fw-bold fs-7 cursor-default">Code</h3>
-    <h3 class="text-muted fw-bold fs-7 cursor-default">Name</h3>
-    <h3 class="text-muted fw-bold fs-7 cursor-default">Qty.</h3>
-    <h3 class="text-muted fw-bold fs-7 cursor-default">Price</h3>
-    <h3 class="text-muted fw-bold fs-7 cursor-default">Options</h3>
-  </div>
-</div>
 <!-- begin::Body-->
-<div class="card-body pt-5" [ngStyle]="{overflowY: 'auto', maxHeight: '480px'}">
-  <div class="timeline-label">
-    <!-- begin::Item-->
-    <div class="timeline-item">
-      <div class="timeline-label fw-bolder text-gray-800 fs-6">
-        xxx
-      </div>
-      <!-- begin:: Badges -->
-      <div class="timeline-badge">
-        <i class="fa fa-genderless text-warning fs-1"></i>
-      </div>
-      <!-- end:: Badges-->
-      <div class="fw-mormal timeline-content text-muted ps-3">
-        xxx <span class="text-primary">#Rs. xxx</span>
-      </div>
+<div class="card-body" [ngStyle]="{overflowY: 'auto', maxHeight: '480px'}">
+  <div class="d-flex flex-row justify-content-between g-xl-8 gy-5">
+    <div class="col-2 d-flex flex-row align-items-center justify-content-start">
+      <h3 class="text-muted fw-bold fs-7 cursor-default">Code</h3>
     </div>
-    <!-- end::Item-->
+    <div class="col-3 d-flex flex-row align-items-center justify-content-center">
+      <h3 class="text-muted fw-bold fs-7 cursor-default">Name</h3>
+    </div>
+    <div class="col-2 d-flex flex-row align-items-center justify-content-end">
+      <h3 class="text-muted fw-bold fs-7 cursor-default">Qty.</h3>
+    </div>
+    <div class="col-2 d-flex flex-row align-items-center justify-content-end">
+      <h3 class="text-muted fw-bold fs-7 cursor-default">Price</h3>
+    </div>
+    <div class="col-3 d-flex flex-row align-items-center justify-content-end">
+      <h3 class="text-muted fw-bold fs-7 cursor-default">Options</h3>
+    </div>
   </div>
-
+  <!--begin::items-->
+ <div class="d-flex flex-row justify-content-between g-xl-8 gy-5 mt-5"
+ *ngFor="let item of items">
+ <div class="col-2 d-flex flex-row align-items-center justify-content-start">
+   <p class="fs-7 cursor-default">{{item.code}}</p>
+ </div>
+ <div class="col-3 d-flex flex-row align-items-center justify-content-center">
+   <p class="fs-7 cursor-default">{{item.name}}</p>
+ </div>
+ <div class="col-2 d-flex flex-row align-items-center justify-content-end">
+   <p class="fs-7 cursor-default">{{item.price}}</p>
+ </div>
+ <div class="col-2 d-flex flex-row align-items-center justify-content-end">
+   <p class="fs-7 cursor-default">{{item.stock}}</p>
+ </div>
+ <div class="col-3 d-flex flex-row align-items-center justify-content-end">
+  <p class="fs-7 cursor-default">{{item.options}}</p>
+</div>
+</div>
+<!--end::items-->
 </div>
 <!-- end: Card Body-->
 <div class="card-body pt-5">
@@ -55,14 +64,14 @@
     </div>
     <div class="col-4">
       <div class="input-group has-validation">
-        <span class="input-group-text text-muted fs-7" id="inputGroupPrepend">Total</span>
+        <span class="input-group-text text-muted fs-7" id="inputGroupPrepend">Gross Total</span>
         <input type="text" class="form-control">
       </div>
     </div>
   </div>
   <!--end::options-->
   <!--begin::qty +- options-->
-  <div class="row">
+  <div class="row mt-2">
     <div class="col-4">
       <div class="d-flex flex-row justify-content-center mt-1">
         <div
@@ -83,6 +92,18 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="input-group has-validation">
+        <span class="input-group-text text-muted fs-7" id="inputGroupPrepend">Discount</span>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="input-group has-validation">
+        <span class="input-group-text text-muted fs-7" id="inputGroupPrepend">Net Total</span>
+        <input type="text" class="form-control">
       </div>
     </div>
   </div>
