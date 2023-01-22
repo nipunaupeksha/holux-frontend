@@ -35,5 +35,56 @@
     </div>
     <!-- end::Item-->
   </div>
+
 </div>
 <!-- end: Card Body-->
+<div class="card-body pt-5">
+  <!-- begin::options-->
+  <div class="row">
+    <div class="col-4">
+      <div class="input-group has-validation">
+        <span class="input-group-text text-muted fs-7" id="inputGroupPrepend">Qty.</span>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="input-group has-validation">
+        <span class="input-group-text text-muted fs-7" id="inputGroupPrepend">Price</span>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="input-group has-validation">
+        <span class="input-group-text text-muted fs-7" id="inputGroupPrepend">Total</span>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+  </div>
+  <!--end::options-->
+  <!--begin::qty +- options-->
+  <div class="row">
+    <div class="col-4">
+      <div class="d-flex flex-row justify-content-center mt-1">
+        <div
+          class="d-flex align-items-stretch ms-1 ms-lg-3 btn btn-icon btn-icon-muted btn-active-light btn-active-color-primary w-35px h-35px w-md-45px h-md-45px">
+          <div class="d-flex align-items-stretch">
+            <div class="d-flex align-items-center">
+              <span [inlineSVG]="'./assets/media/icons/duotune/general/gen035.svg'"
+                class="svg-icon svg-icon-1 svg-icon-muted"></span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="d-flex align-items-stretch ms-1 ms-lg-3 btn btn-icon btn-icon-muted btn-active-light btn-active-color-primary w-35px h-35px w-md-45px h-md-45px">
+          <div class="d-flex align-items-stretch">
+            <div class="d-flex align-items-center">
+              <span [inlineSVG]="'./assets/media/icons/duotune/general/gen036.svg'"
+                class="svg-icon svg-icon-1 svg-icon-muted"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end::qty +- options-->
+</div>
