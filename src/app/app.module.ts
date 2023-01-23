@@ -35,7 +35,8 @@ import { PosComponent } from './pages/pos/pos.component'
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component'
 import { SigninComponent } from './pages/signin/signin.component'
 import { SignupComponent } from './pages/signup/signup.component'
-import { FilterPipe } from './pipes/filter.pipe'
+import { FilterPipe } from './pipes/filter.pipe';
+import { HomeModalComponent } from './components/partials/home-modal/home-modal.component'
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import { FilterPipe } from './pipes/filter.pipe'
     UserLogoutComponent,
     Widget6Component,
     Widget7Component,
+    HomeModalComponent,
   ],
   imports: [
     BrowserModule,
