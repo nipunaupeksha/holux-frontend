@@ -6,9 +6,7 @@ import { Component, OnInit } from '@angular/core'
   styleUrls: ['./widget6.component.scss'],
 })
 export class Widget6Component implements OnInit {
-  items = [
-
-  ]
+  items = []
   constructor() {}
 
   ngOnInit(): void {}

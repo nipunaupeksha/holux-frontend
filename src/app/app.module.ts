@@ -19,6 +19,7 @@ import { HeaderMenuComponent } from './components/header/header-menu/header-menu
 import { HeaderComponent } from './components/header/header.component'
 import { ToolbarComponent } from './components/header/toolbar/toolbar.component'
 import { TopbarComponent } from './components/header/topbar/topbar.component'
+import { HomeModalComponent } from './components/partials/home-modal/home-modal.component'
 import { UserLogoutComponent } from './components/partials/user-logout/user-logout.component'
 import { Widget1Component } from './components/widgets/widget1/widget1.component'
 import { Widget2Component } from './components/widgets/widget2/widget2.component'
@@ -35,8 +36,7 @@ import { PosComponent } from './pages/pos/pos.component'
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component'
 import { SigninComponent } from './pages/signin/signin.component'
 import { SignupComponent } from './pages/signup/signup.component'
-import { FilterPipe } from './pipes/filter.pipe';
-import { HomeModalComponent } from './components/partials/home-modal/home-modal.component'
+import { FilterPipe } from './pipes/filter.pipe'
 
 @NgModule({
   declarations: [

@@ -1,4 +1,4 @@
-<!-- begin:: Header -->
+<!-- begin::Header -->
 <div class="card-header align-items-center border-0 mt-5">
   <h3 class="card-title align-items-start flex-column">
     <span class="fw-bolder mb-2 text-dark cursor-default">Current Bill</span>
@@ -6,6 +6,7 @@
       bill</span>
   </h3>
 </div>
+<!-- end::Header-->
 <!-- begin::Body-->
 <div class="card-body">
   <div class="d-flex flex-row justify-content-between g-xl-8 gy-5">
@@ -26,7 +27,7 @@
     </div>
   </div>
   <!--begin::items-->
-  <div [ngStyle]="{overflowY: 'auto', maxHeight: '350px', minHeight:'350px'}">
+  <div [ngStyle]="{overflowY: 'auto', height:'58vh', minHeight:'350px'}">
     <div class="d-flex flex-row justify-content-between g-xl-8 gy-5 mt-5"
       *ngFor="let item of items">
       <div class="col-2 d-flex flex-row align-items-center justify-content-start">
@@ -112,11 +113,17 @@
   </div>
   <!--end::qty +- options/discount/net-->
   <!--begin::print bill-->
-  <div class="row mt-2 d-flex flex-row justify-content-end">
+  <div class="row mt-2 d-flex flex-row justify-content-end pb-2">
+    <div class="col-4 d-flex justify-content-end">
+      <div class="btn btn-danger">
+        Options &nbsp;<span [inlineSVG]="'./assets/media/icons/duotune/coding/cod001.svg'"
+          class="svg-icon svg-icon-1 svg-icon-muted"></span>&nbsp; (F1)
+      </div>
+    </div>
     <div class="col-4 d-flex justify-content-end">
       <div class="btn btn-warning">
         Reset Bill &nbsp;<span
-          [inlineSVG]="'./assets/media/icons/duotune/arrows/arr046.svg'"
+          [inlineSVG]="'./assets/media/icons/duotune/arrows/arr059.svg'"
           class="svg-icon svg-icon-1 svg-icon-muted"></span>&nbsp; (F3)
       </div>
     </div>
