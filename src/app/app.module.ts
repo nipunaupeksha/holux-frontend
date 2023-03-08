@@ -38,7 +38,9 @@ import { ResetPasswordComponent } from './pages/reset-password/reset-password.co
 import { SigninComponent } from './pages/signin/signin.component'
 import { SignupComponent } from './pages/signup/signup.component'
 import { FilterPipe } from './pipes/filter.pipe';
-import { CashOutModalComponent } from './components/partials/cash-out-modal/cash-out-modal.component'
+import { CashOutModalComponent } from './components/partials/cash-out-modal/cash-out-modal.component';
+import { DayEndModalComponent } from './components/partials/day-end-modal/day-end-modal.component';
+import { ReportsModalComponent } from './components/partials/reports-modal/reports-modal.component'
 
 @NgModule({
   declarations: [
@@ -74,6 +76,8 @@ import { CashOutModalComponent } from './components/partials/cash-out-modal/cash
     HomeModalComponent,
     CashInModalComponent,
     CashOutModalComponent,
+    DayEndModalComponent,
+    ReportsModalComponent,
   ],
   imports: [
     BrowserModule,

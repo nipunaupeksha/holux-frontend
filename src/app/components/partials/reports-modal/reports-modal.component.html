@@ -1,0 +1,43 @@
+<ng-template #content let-modal>
+  <!--begin::Modal Header-->
+  <div class="modal-header align-items-center pb-0 border-0">
+    <span [inlineSVG]="'./assets/media/icons/duotune/arrows/arr088.svg'"
+      class="svg-icon svg-icon-2x svg-icon-white bg-danger mb-2 position-absolute top-0 end-0 border-bottom border-1 rounded cursor-pointer"
+      (click)="modal.dismiss()"></span>
+    <h3 class="align-items-start flex-row">
+      <span [inlineSVG]="'./assets/media/icons/duotune/files/fil003.svg'"
+      class="svg-icon svg-icon-1 svg-icon-primary mb-2 me-4"></span>
+      <span class="fw-bolder text-primary cursor-default">Reports</span>
+    </h3>
+  </div>
+  <hr class="hr hr-blurry" />
+  <!-- end::Modal Header-->
+  <!--begin::Modal Body-->
+  <div class="modal-body">
+    <form class="row g-3 needs-validation">
+      <!--begin::date-->
+      <div class="col-12">
+        <label for="date" class="form-label">Date</label>
+        <div class="input-group has-validation">
+          <input type="text" name="date" class="form-control" id="date" required>
+        </div>
+      </div>
+      <!--end::date-->
+      <!--begin::outlet-->
+      <div class="col-12">
+        <label for="outlet" class="form-label">Outlet</label>
+        <div class="input-group has-validation">
+          <input type="text" name="outlet" class="form-control" id="outlet" required>
+        </div>
+      </div>
+      <!--end::outlet-->
+      <div class="col-12"> <button class="btn btn-primary w-100 mt-5 mb-3"
+          type="submit">Generate Report</button></div>
+    </form>
+  </div>
+  <!--end::Modal Body-->
+</ng-template>
+
+<!-- temp -->
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch Reports
+  Modal</button>
