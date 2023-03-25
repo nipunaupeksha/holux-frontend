@@ -25,6 +25,7 @@ export class Card5Component implements OnInit {
   ngOnInit(): void {
     this.route.queryParams.subscribe((params: Params) => {
       if (params) this.email = params['email']
+      console.log(this.email)
     })
   }
 
@@ -42,7 +43,8 @@ export class Card5Component implements OnInit {
 
     this.userService.changePassword(this.email, this.password).subscribe(
       (data) => {
-        this.router.navigate(['/dashboard'])
+        console.log('output', this.email)
+        this.router.navigate(['/sign-in'])
       },
       (error) => {
         console.log(error)

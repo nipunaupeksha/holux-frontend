@@ -9,7 +9,7 @@
       <h5 class="card-title text-center pb-0 fs-4">Forgot Password?</h5>
       <p class="text-center small">Enter your email to send a token</p>
     </div>
-    <form class="row g-3 needs-validation">
+    <form class="row g-3 needs-validation" (ngSubmit)="sendEmail()">
       <div class="col-12">
         <label for="email" class="form-label">Your Email</label> <input type="email"
           name="email" class="form-control" id="email" required [(ngModel)]="email">
@@ -17,7 +17,7 @@
           Email address!</div>
       </div>
       <div class="col-12"> <button class="btn btn-primary w-100" type="submit"
-          (click)="sendEmail()" (keyup.enter)="sendEmail()" appDoubleClickPrevention>Send
+          appDoubleClickPrevention>Send
           e-mail</button></div>
     </form>
   </div>

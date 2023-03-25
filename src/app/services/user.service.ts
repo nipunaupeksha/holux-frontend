@@ -27,6 +27,7 @@ export class UserService {
   public signUp(
     username: string,
     email: string,
+    mobile: string,
     password: string,
     fullname: string,
     type: string
@@ -35,6 +36,7 @@ export class UserService {
       .post(this.BACKEND_URL + '/users/sign-up', {
         username: username,
         email: email,
+        mobile: mobile,
         password: password,
         fullname: fullname,
         type: type,

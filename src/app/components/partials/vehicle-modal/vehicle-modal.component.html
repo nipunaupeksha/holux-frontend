@@ -5,9 +5,9 @@
       class="svg-icon svg-icon-2x svg-icon-white bg-danger mb-2 position-absolute top-0 end-0 border-bottom border-1 rounded cursor-pointer"
       (click)="modal.dismiss()"></span>
     <h3 class="align-items-start flex-row">
-      <span [inlineSVG]="'./assets/media/icons/duotune/files/fil003.svg'"
+      <span [inlineSVG]="'./assets/media/icons/duotune/ecommerce/ecm006.svg'"
         class="svg-icon svg-icon-1 svg-icon-primary mb-2 me-4"></span>
-      <span class="fw-bolder text-primary cursor-default">Reports</span>
+      <span class="fw-bolder text-primary cursor-default">Transportation</span>
     </h3>
   </div>
   <hr class="hr hr-blurry" />
@@ -17,27 +17,28 @@
     <form class="row g-3 needs-validation">
       <!--begin::date-->
       <div class="col-12">
-        <label for="date" class="form-label">Date</label>
+        <label for="date" class="form-label">Modal</label>
         <div class="input-group has-validation">
-          <input type="text" name="date" class="form-control" id="date" required>
+          <input type="text" name="modal" class="form-control" id="modal" required>
         </div>
       </div>
       <!--end::date-->
       <!--begin::outlet-->
       <div class="col-12">
-        <label for="outlet" class="form-label">Outlet</label>
+        <label for="outlet" class="form-label">Registration Number</label>
         <div class="input-group has-validation">
-          <input type="text" name="outlet" class="form-control" id="outlet" required>
+          <input type="text" name="reg-number" class="form-control" id="reg-number"
+            required>
         </div>
       </div>
       <!--end::outlet-->
       <div class="col-12"> <button class="btn btn-primary w-100 mt-5 mb-3"
-          type="submit">Generate Report</button></div>
+          type="submit">Add Vehicle</button></div>
     </form>
   </div>
   <!--end::Modal Body-->
 </ng-template>
 
 <!-- temp -->
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch Reports
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch Vehicles
   Modal</button>

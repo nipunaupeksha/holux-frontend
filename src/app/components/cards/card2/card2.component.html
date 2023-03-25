@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center py-4 flex-column align-items-center">
   <span [inlineSVG]="'./assets/media/icons/duotune/abstract/abs005.svg'"
     class="svg-icon svg-icon-3x svg-icon-primary mb-2"></span>
-  <span class="d-none d-lg-block fs-3 text-primary">Holux</span>
+  <span class="d-none d-lg-block fs-3 text-primary cursor-default">Holux</span>
 </div>
 <div class="card mb-3">
   <div class="card-body">
@@ -9,7 +9,7 @@
       <h5 class="card-title text-center pb-0 fs-4">Create an Account</h5>
       <p class="text-center small">Enter your personal details to create account</p>
     </div>
-    <form class="row g-3 needs-validation">
+    <form class="row g-3 needs-validation" (ngSubmit)="signUp()">
       <div class="col-12">
         <label for="fullname" class="form-label">Your Name</label> <input type="text"
           name="fullname" class="form-control" id="fullname" required
@@ -21,7 +21,14 @@
         <label for="email" class="form-label">Your Email</label> <input type="email"
           name="email" class="form-control" id="email" required [(ngModel)]="email">
         <div class="text-primary" [ngClass]="{'d-none':!emailError}">Please enter a valid
-          Email address!</div>
+          e-mail address!</div>
+      </div>
+      <div class="col-12">
+        <label for="email" class="form-label">Your Mobile</label> <input type="tel"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="XXX-XXX-XXXX" name="mobile"
+          class="form-control" id="mobile" required [(ngModel)]="mobile">
+        <div class="text-primary" [ngClass]="{'d-none':!mobileError}">Please enter a valid
+          mobile number!</div>
       </div>
       <div class="col-12">
         <label for="username" class="form-label">Username</label>
@@ -29,9 +36,9 @@
           <span class="input-group-text" id="inputGroupPrepend">@</span> <input
             type="text" name="username" class="form-control" id="username" required
             [(ngModel)]="username">
-          <div class="text-primary" [ngClass]="{'d-none':!usernameError}">Please choose a
-            username!</div>
         </div>
+        <div class="text-primary" [ngClass]="{'d-none':!usernameError}">Please choose a
+          username!</div>
       </div>
       <div class="col-12">
         <label for="usertype" class="form-label">User Type</label>
@@ -60,13 +67,12 @@
         <div class="text-primary" [ngClass]="{'d-none': !passwordsDoNotMatchError}">
           Passwords do not match!</div>
       </div>
-      <div class="col-12"> <button class="btn btn-primary w-100" type="submit"
-          (click)="signUp()" (keyup.enter)="signUp()">Create
+      <div class="col-12"> <button class="btn btn-primary w-100" type="submit">Create
           Account</button></div>
       <div class="text-primary text-center"
-        [ngClass]="{'d-none': !emailAlreadyExistsError}">Email already exists!</div>
+        [ngClass]="{'d-none': !emailAlreadyExistsError}">E-Mail already exists!</div>
       <div class="text-primary text-center"
-        [ngClass]="{'d-none': !usernameAlreadyExistsError}">Username already credentials!
+        [ngClass]="{'d-none': !usernameAlreadyExistsError}">Username already exists!
       </div>
       <div class="col-12">
         <p class="small mb-0">Already have an account?&nbsp; <a routerLink="/sign-in">Log

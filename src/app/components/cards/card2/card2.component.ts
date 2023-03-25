@@ -15,6 +15,7 @@ export class Card2Component implements OnInit {
 
   fullname: string = ''
   email: string = ''
+  mobile: string = ''
   username: string = ''
   password: string = ''
   retypePassword: string = ''
@@ -22,6 +23,7 @@ export class Card2Component implements OnInit {
 
   fullnameError: boolean = false
   emailError: boolean = false
+  mobileError: boolean = false
   usernameError: boolean = false
   passwordError: boolean = false
   retypePasswordError: boolean = false
@@ -37,8 +39,10 @@ export class Card2Component implements OnInit {
   ngOnInit(): void {}
 
   signUp() {
+    // If undefined values are entered
     this.fullnameError = this.fullname == undefined
     this.emailError = this.email == undefined
+    this.mobileError = this.mobile == undefined
     this.usernameError = this.username == undefined
     this.passwordError = this.password == undefined
     this.retypePasswordError = this.retypePassword == undefined
@@ -47,6 +51,7 @@ export class Card2Component implements OnInit {
     if (
       this.fullnameError ||
       this.emailError ||
+      this.mobileError ||
       this.usernameError ||
       this.passwordError ||
       this.retypePasswordError ||
@@ -54,8 +59,10 @@ export class Card2Component implements OnInit {
     )
       return
 
+    // If empty values are entered
     this.fullnameError = this.fullname.trim().length == 0
     this.emailError = this.email.trim().length == 0
+    this.mobileError = this.mobile.trim().length == 0
     this.usernameError = this.username.trim().length == 0
     this.passwordError = this.password.trim().length == 0
     this.retypePasswordError = this.retypePassword.trim().length == 0
@@ -64,6 +71,7 @@ export class Card2Component implements OnInit {
     if (
       this.fullnameError ||
       this.emailError ||
+      this.mobileError ||
       this.usernameError ||
       this.passwordError ||
       this.retypePasswordError ||
@@ -71,11 +79,19 @@ export class Card2Component implements OnInit {
     )
       return
 
+    // If passwords are not matched
     this.passwordsDoNotMatchError = this.password != this.retypePassword
     if (this.passwordsDoNotMatchError) return
 
     this.userService
-      .signUp(this.username, this.email, this.password, this.fullname, this.usertype)
+      .signUp(
+        this.username,
+        this.email,
+        this.mobile,
+        this.password,
+        this.fullname,
+        this.usertype
+      )
       .subscribe(
         (data) => {
           console.log(data)

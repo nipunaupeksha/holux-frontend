@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center py-4 flex-column align-items-center">
   <span [inlineSVG]="'./assets/media/icons/duotune/abstract/abs005.svg'"
     class="svg-icon svg-icon-3x svg-icon-primary mb-2"></span>
-  <span class="d-none d-lg-block fs-3 text-primary">Holux</span>
+  <span class="d-none d-lg-block fs-3 text-primary cursor-default">Holux</span>
 </div>
 <div class="card mb-3">
   <div class="card-body">
@@ -9,7 +9,7 @@
       <h5 class="card-title text-center pb-0 fs-4">Change Password</h5>
       <p class="text-center small">Change your password</p>
     </div>
-    <form class="row g-3 needs-validation">
+    <form class="row g-3 needs-validation" (ngSubmit)="changePassword()">
       <div class="col-12">
         <label for="password" class="form-label">Password</label> <input type="password"
           name="password" class="form-control" id="password" required
@@ -26,8 +26,7 @@
         <div class="text-primary" [ngClass]="{'d-none':!passwordsDoNotMatchError}">
           Passwords do not match!</div>
       </div>
-      <div class="col-12"> <button class="btn btn-primary w-100" type="submit"
-          (click)="changePassword()" (keyup.enter)="changePassword()">Change
+      <div class="col-12"> <button class="btn btn-primary w-100" type="submit">Change
           Password</button>
       </div>
     </form>

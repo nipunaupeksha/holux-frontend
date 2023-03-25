@@ -20,8 +20,12 @@ import { HeaderComponent } from './components/header/header.component'
 import { ToolbarComponent } from './components/header/toolbar/toolbar.component'
 import { TopbarComponent } from './components/header/topbar/topbar.component'
 import { CashInModalComponent } from './components/partials/cash-in-modal/cash-in-modal.component'
+import { CashOutModalComponent } from './components/partials/cash-out-modal/cash-out-modal.component'
+import { DayEndModalComponent } from './components/partials/day-end-modal/day-end-modal.component'
 import { HomeModalComponent } from './components/partials/home-modal/home-modal.component'
+import { ReportsModalComponent } from './components/partials/reports-modal/reports-modal.component'
 import { UserLogoutComponent } from './components/partials/user-logout/user-logout.component'
+import { VehicleModalComponent } from './components/partials/vehicle-modal/vehicle-modal.component'
 import { Widget1Component } from './components/widgets/widget1/widget1.component'
 import { Widget2Component } from './components/widgets/widget2/widget2.component'
 import { Widget3Component } from './components/widgets/widget3/widget3.component'
@@ -37,10 +41,7 @@ import { PosComponent } from './pages/pos/pos.component'
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component'
 import { SigninComponent } from './pages/signin/signin.component'
 import { SignupComponent } from './pages/signup/signup.component'
-import { FilterPipe } from './pipes/filter.pipe';
-import { CashOutModalComponent } from './components/partials/cash-out-modal/cash-out-modal.component';
-import { DayEndModalComponent } from './components/partials/day-end-modal/day-end-modal.component';
-import { ReportsModalComponent } from './components/partials/reports-modal/reports-modal.component'
+import { FilterPipe } from './pipes/filter.pipe'
 
 @NgModule({
   declarations: [
@@ -78,6 +79,7 @@ import { ReportsModalComponent } from './components/partials/reports-modal/repor
     CashOutModalComponent,
     DayEndModalComponent,
     ReportsModalComponent,
+    VehicleModalComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,15 +9,14 @@
       <h5 class="card-title text-center pb-0 fs-4">Enter Token</h5>
       <p class="text-center small">Enter the token sent to your mail</p>
     </div>
-    <form class="row g-3 needs-validation">
+    <form class="row g-3 needs-validation" (ngSubmit)="validateToken()">
       <div class="col-12">
         <label for="token" class="form-label">Token</label> <input type="text"
           name="token" class="form-control" id="token" required [(ngModel)]="token">
         <div class="text-primary" [ngClass]="{'d-none':!tokenError}">Please enter a the
           token sent to your mail!</div>
       </div>
-      <div class="col-12"> <button class="btn btn-primary w-100" type="submit"
-          (click)="validateToken()" (keyup.enter)="validateToken()">Validate
+      <div class="col-12"> <button class="btn btn-primary w-100" type="submit">Validate
           Token</button>
       </div>
     </form>
