@@ -27,6 +27,7 @@ import { ReportsModalComponent } from './components/partials/reports-modal/repor
 import { UserLogoutComponent } from './components/partials/user-logout/user-logout.component'
 import { VehicleModalComponent } from './components/partials/vehicle-modal/vehicle-modal.component'
 import { Widget1Component } from './components/widgets/widget1/widget1.component'
+import { Widget10Component } from './components/widgets/widget10/widget10.component'
 import { Widget2Component } from './components/widgets/widget2/widget2.component'
 import { Widget3Component } from './components/widgets/widget3/widget3.component'
 import { Widget4Component } from './components/widgets/widget4/widget4.component'
@@ -36,6 +37,7 @@ import { Widget7Component } from './components/widgets/widget7/widget7.component
 import { Widget8Component } from './components/widgets/widget8/widget8.component'
 import { Widget9Component } from './components/widgets/widget9/widget9.component'
 import { DoubleClickPreventionDirective } from './directives/double-click-prevention.directive'
+import { AddProductsComponent } from './pages/add-products/add-products.component'
 import { DashboardComponent } from './pages/dashboard/dashboard.component'
 import { ForgetPasswordTokenComponent } from './pages/forget-password-token/forget-password-token.component'
 import { ForgetPasswordComponent } from './pages/forget-password/forget-password.component'
@@ -88,6 +90,8 @@ import { FilterPipe } from './pipes/filter.pipe'
     Widget8Component,
     ProductsComponent,
     Widget9Component,
+    Widget10Component,
+    AddProductsComponent,
   ],
   imports: [
     BrowserModule,
