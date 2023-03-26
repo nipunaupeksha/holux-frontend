@@ -33,14 +33,18 @@ import { Widget4Component } from './components/widgets/widget4/widget4.component
 import { Widget5Component } from './components/widgets/widget5/widget5.component'
 import { Widget6Component } from './components/widgets/widget6/widget6.component'
 import { Widget7Component } from './components/widgets/widget7/widget7.component'
+import { Widget8Component } from './components/widgets/widget8/widget8.component'
+import { Widget9Component } from './components/widgets/widget9/widget9.component'
 import { DoubleClickPreventionDirective } from './directives/double-click-prevention.directive'
 import { DashboardComponent } from './pages/dashboard/dashboard.component'
 import { ForgetPasswordTokenComponent } from './pages/forget-password-token/forget-password-token.component'
 import { ForgetPasswordComponent } from './pages/forget-password/forget-password.component'
 import { PosComponent } from './pages/pos/pos.component'
+import { ProductsComponent } from './pages/products/products.component'
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component'
 import { SigninComponent } from './pages/signin/signin.component'
 import { SignupComponent } from './pages/signup/signup.component'
+import { VehiclesComponent } from './pages/vehicles/vehicles.component'
 import { FilterPipe } from './pipes/filter.pipe'
 
 @NgModule({
@@ -80,6 +84,10 @@ import { FilterPipe } from './pipes/filter.pipe'
     DayEndModalComponent,
     ReportsModalComponent,
     VehicleModalComponent,
+    VehiclesComponent,
+    Widget8Component,
+    ProductsComponent,
+    Widget9Component,
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core'
   styleUrls: ['./toolbar.component.scss'],
 })
 export class ToolbarComponent implements OnInit {
-  @Input('title') title
+  @Input('title') title: string
   currentDate = new Date()
   constructor() {}
 
